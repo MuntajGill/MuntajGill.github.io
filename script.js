@@ -25,3 +25,10 @@ function showPopup(bool) {
     document.getElementById('popup').style.visibility = 'hidden'
   }
 }
+
+window.addEventListener('scroll', function () {
+  const bg = document.getElementById('parallax-background');
+  const scrollY = window.scrollY;
+  const offset = scrollY * 0.4; // 0.4 makes it scroll slower
+  bg.style.backgroundPositionY = `-${offset}px`;
+});
